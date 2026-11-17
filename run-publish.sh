@@ -32,6 +32,7 @@ if [ ! -d "$REPO_DIR/node_modules" ]; then
 fi
 
 
+export NEXT_PUBLIC_SITE_VARIANT="astrokobi-space"
 echo "--- generation: npx tsx scripts/run-local.ts ---"
 npx tsx scripts/run-local.ts
 
