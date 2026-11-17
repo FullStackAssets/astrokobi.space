@@ -35,6 +35,8 @@ fi
 export NEXT_PUBLIC_SITE_VARIANT="astrokobi-space"
 echo "--- generation: npx tsx scripts/run-local.ts ---"
 npx tsx scripts/run-local.ts
+echo "--- normalize generated MDX ---"
+node scripts/normalize-mdx.mjs || echo "WARNING: MDX normalization failed; build may fail on malformed posts." >&2
 
 git config user.name "trendblog-bot"
 git config user.email "bot@trendblog.dev"
